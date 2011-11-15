@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>checkecn.png</file>
+        <file>bad.gif</file>
+        <file>tag.png</file>
+        <file>valid.gif</file>
+        <file>all.gif</file>
+    </qresource>
+</RCC>
