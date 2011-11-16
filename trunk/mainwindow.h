@@ -2,12 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QKeyEvent>
-#include <QProgressBar>
-#include "ecnitemmodel.h"
-#include "ecnitemdelegate.h"
-#include "QSortFilterProxyModel"
-#include <QPropertyAnimation>
+#include "itemdockwidget.h"
+#include "centralwidget.h"
+#include <QTextEdit>
+
 
 namespace Ui {
     class MainWindow;
@@ -22,20 +20,18 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    void keyPressEvent(QKeyEvent * event);
+
 
 public slots:
-    void filterState(int state );
-    void addScore(const QModelIndex& index);
-    void showAbout();
-    void updateStatus();
-    void remiseAZero();
+    void save();
+    void load(int item);
+    void setBold(bool bold);
 
 private:
     Ui::MainWindow *ui;
-    EcnItemModel * mModel;
-    QSortFilterProxyModel * mSortModel;
-    QPropertyAnimation * mAnimation;
+    ItemDockWidget * mItemDockWidget;
+    CentralWidget * mCentralWidget;
+
 };
 
 #endif // MAINWINDOW_H

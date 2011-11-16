@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ItemDockWidget</class>
+ <widget class="QDockWidget" name="ItemDockWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DockWidget</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="placeholderText">
+         <string>filter...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox">
+        <item>
+         <property name="text">
+          <string>non fait</string>
+         </property>
+         <property name="icon">
+          <iconset resource="gfx.qrc">
+           <normaloff>:/bad.gif</normaloff>:/bad.gif</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>en cours</string>
+         </property>
+         <property name="icon">
+          <iconset resource="gfx.qrc">
+           <normaloff>:/tag.png</normaloff>:/tag.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>fait</string>
+         </property>
+         <property name="icon">
+          <iconset resource="gfx.qrc">
+           <normaloff>:/valid.gif</normaloff>:/valid.gif</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>tous</string>
+         </property>
+         <property name="icon">
+          <iconset resource="gfx.qrc">
+           <normaloff>:/all.gif</normaloff>:/all.gif</iconset>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableView" name="tableView">
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+     </widget>
+    </item>
+    <item>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="value">
+       <number>0</number>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="textVisible">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="gfx.qrc"/>
+ </resources>
+ <connections/>
+</ui>
