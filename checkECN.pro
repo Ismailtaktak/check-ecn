@@ -13,16 +13,28 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     ecnitemmodel.cpp \
+    itemdockwidget.cpp \
+    centralwidget.cpp
 
 HEADERS  += mainwindow.h  ecnitemmodel.cpp \
-    ecnitemmodel.h
+    ecnitemmodel.h \
+    itemdockwidget.h \
+    centralwidget.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    itemdockwidget.ui \
+    centralwidget.ui
 
 RC_FILE = checkecn.rc
 
 RESOURCES += \
     gfx.qrc
+
+
+
+
+
+
 
 
 
